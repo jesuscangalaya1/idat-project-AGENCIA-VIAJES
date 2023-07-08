@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recuperar Contraseña</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 4px;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #2196F3; /* Cambiado a color azul */
+            color: #fff; /* Cambiado a texto claro */
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        a:hover {
+            background-color: #0D47A1; /* Cambiado a color azul más oscuro al pasar el cursor */
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Recuperar Contraseña</h2>
+    <h3><span>Hola, </span><span th:text="${userName}"></span></h3>
+    <p>Has solicitado recuperar tu contraseña. Haz click en el siguiente enlace para acceder a tu cuenta:</p>
+    <a th:href="@{${url}}">Ir a mi cuenta</a>
+</div>
+<div class="footer">
+    <p>Este correo electrónico fue generado automáticamente.</p>
+</div>
+</body>
+</html>
